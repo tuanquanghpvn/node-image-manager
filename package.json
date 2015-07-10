@@ -1,6 +1,6 @@
 {
-  "name": "Node Image Manager",
-  "version": "0.0.0",
+  "name": "node-image-manager",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
@@ -13,6 +13,10 @@
     "express": "~4.12.4",
     "fs-extra": "^0.20.1",
     "morgan": "~1.5.3",
-    "serve-favicon": "~2.2.1"
+    "serve-favicon": "~2.2.1",
+    "ect": "*",
+    "compression": "*",
+    "connect-multiparty": "*",
+    "node-gallery": "*"
   }
 }
