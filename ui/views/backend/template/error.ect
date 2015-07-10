@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Odds Analytics</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <!-- Bootstrap 3.3.2 -->
+        <link href="/backend/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- FontAwesome 4.3.0 -->
+        <link href="/shared/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons 2.0.0 -->
+        <link href="/shared/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="/backend/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+        <link href="/backend/dist/css/MyStyle.css" rel="stylesheet" type="text/css" />
+        <link href="/backend/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body class="skin-blue sidebar-collapse" id="top">
+        <div class="wrapper">            
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Main content -->
+                <section class="content">
+                    <div class="error-page">
+                        <h2 class="headline text-yellow"> 404</h2>
+                        <div class="error-content">
+                            <h3><i class="fa fa-warning text-yellow"></i> Oops! Page not found.</h3>
+                            <p>
+                                <h1><%= message %></h1>
+                                <h2><%= error.status %></h2>
+                                <pre><%= error.stack %></pre>
+                                
+                                We could not find the page you were looking for.
+                                Meanwhile, you may <a href="/admin">return to dashboard</a> or try using the search form.
+                            </p>
+                            <form class="search-form">
+                                <div class="input-group">
+                                    <input type="text" name="search" class="form-control" placeholder="Search">
+                                    <div class="input-group-btn">
+                                        <button type="submit" name="submit" class="btn btn-warning btn-flat"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /.input-group -->
+                            </form>
+                        </div>
+                        <!-- /.error-content -->
+                    </div>
+                    <!-- /.error-page -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">                
+                <strong>Copyright &copy; 2014-2015 <!-- <a href="/">V3S</a> -->.</strong> All rights reserved.
+                <!-- <div class="pull-right hidden-xs">
+                    <b>Version</b> 2.0
+                </div> -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+        
+        <!-- jQuery 2.1.3 -->
+        <script src="/backend/plugins/jQuery/jQuery-2.1.3.min.js"></script>
+        <!-- jQuery UI 1.11.2 -->
+        <script src="/shared/jquery-ui-1.11.4.custom/jquery-ui.min.js" type="text/javascript"></script>
+        <!-- Bootstrap 3.3.2 JS -->
+        <script src="/backend/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>    
+        <!-- Slimscroll -->
+        <script src="/backend/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="/backend/dist/js/app.min.js" type="text/javascript"></script>  
+        <!-- Angular -->    
+        <script src="/shared/angular-1.3.14/angular.min.js"></script>     
+        <script src="/shared/ui-router-master/release/angular-ui-router.min.js"></script>            
+        <script src="/shared/js/ocLazyLoad.js"></script>
+        <script src="/shared/js/ui-bootstrap-tpls-0.13.0.min.js"></script>          
+    </body>
+</html>

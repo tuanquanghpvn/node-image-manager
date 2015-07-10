@@ -1,0 +1,200 @@
+.priority {
+	cursor: move; 
+	list-style-type: none; 
+	padding: 5px; 
+	background-color: #F5F5F5;	
+	margin-bottom: 2px;
+}
+
+.priority-checked {
+	cursor: move; 
+	list-style-type: none; 
+	padding: 5px; 
+	background-color: #F4E982;	
+	margin-bottom: 2px;
+}
+
+#loading-indicator {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	right: 50%;
+	bottom: 50%;
+}
+
+.scroll-table {
+	max-height: 420px;
+  	overflow-y: scroll;
+}
+
+.querySearch {
+	padding-bottom: 10px;
+}
+
+.fix-height-left {
+	overflow-y: scroll; 
+	position: relative; 
+	max-height: 282px;
+	margin-bottom: 20px;
+}
+
+.fix-height-left-sm {
+	overflow-y: scroll; 
+	position: relative; 
+	max-height: 220px;
+	margin-bottom: 20px;	
+}
+
+.selected {
+	background: #5BB3B3 !important;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-button {
+	width: 8px;
+	height:5px;
+}
+::-webkit-scrollbar-track {
+	background:#eee;
+	border: thin solid lightgray;
+	box-shadow: 0px 0px 3px #dfdfdf inset;
+	border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+	background:#999;
+	border: thin solid gray;
+	border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background:#7d7d7d;
+}	
+.folder {
+	width: 100px;
+	height: 100px;
+}
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+
+.thumbnail img {
+    max-width:100%;
+    max-height:110px;
+    min-height:110px;
+}
+
+.thumbnail i {
+    display:block;
+    position:absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;	    
+}
+
+/* CSS CREATE FOLDER */
+.create-new-folder, .add-user-popup .create-new-folder, .add-user-popup, .create-folder-dialog {
+	position: absolute;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	width: 360px;
+	background-color: white;
+	margin: 5px 0 0 0;
+	z-index: 900;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	display: block;
+}
+.create-folder-dialog {
+	min-width: 334px;
+	min-height: 154px;
+	left: 50%;
+	top: 50%;
+	margin: -77px 0 0 -167px;
+}
+.create-folder-arrow, .add-user-popup-arrow {
+	width: 25px;
+	height: 13px;
+	position: absolute;
+	background-image: url(https://g.cdn1.mega.co.nz/3/images/mega/nw-fm-sprite_v6.svg);
+	background-position: center -5891px;
+	background-repeat: no-repeat;
+	margin: 25px 0 0 -12px;
+	left: 50%;
+	z-index: 901;
+	display: none;
+}
+.active .create-folder-arrow, .active .add-user-popup-arrow {
+	display: block;
+}
+.create-folder-dialog .create-folder-pad {
+	margin: 12px 12px 12px 12px
+}
+.create-folder-pad, .add-user-popup-pad {
+	margin: 18px 12px 12px 12px;
+}
+.create-folder-bottom, .default-dialog-bottom {
+	height: 56px;
+	background-color: #F6F6F6;
+	margin: 12px -12px -12px -12px;
+	display: none;
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomleft: 7px;
+	border-bottom-left-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-border-radius-bottomright: 7px;
+	border-bottom-right-radius: 7px;
+	padding: 12px;
+}
+
+.create-folder-bottom .create-folder-button, .create-folder-bottom, .default-dialog-bottom, .create-folder-button .create-folder-button-cancel {
+	display: block !important;
+}
+.create-folder-size-icon, .add-user-size-icon {
+	background-image: url(./backend/dist/img/nw-fm-sprite_v6.svg);
+	background-position: center -5509px;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	opacity: 0.3;
+	cursor: pointer;
+}
+.create-folder-input-bl, .add-user-popup-input-bl, .fm-account-input, .fm-account-select, .rename-input-bl, .fm-version-select {
+	float: left;
+	width: 235px;
+	background-color: rgba(0,0,0,0.05);
+	height: 32px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	position: relative;
+}
+.create-folder-input-bl, .add-user-popup-input-bl, .rename-input-bl {
+	width: 100%;
+	float: none;
+}
+.create-folder-input-bl input, .add-user-popup-input-bl input, .fm-account-input input, .fm-account-select, .fm-version-select, .rename-input-bl input {
+	width: 100%;
+	background-color: white;
+	line-height: 31px;
+	margin-top: 0;
+	font-size: 12px;
+	color: #666666;
+	padding: 0 10px 0 42px;
+	margin: 0;
+	background-image: url(/backend/dist/img/dialogs-sprite_v3.svg);
+	background-position: 3px -1890px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 0;
+}

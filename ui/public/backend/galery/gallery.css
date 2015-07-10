@@ -1,0 +1,50 @@
+ul li.thumb img{
+    max-width: 128px;
+    max-height: 120px;
+}
+ul li.thumb div.image {
+    /*width: 150px;*/
+    max-height: 120px;
+    padding: 0px 0px 10px 0px;
+}
+ul li.thumb {
+    text-align: center;
+    list-style: none;
+    float: left;
+    width: 150px;
+    min-height: 190px;
+    height: 190px;
+    margin: 10px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+}
+/*ul li.thumb span{text-overflow: clip;}*/
+ul li.thumb a{display: block;}
+ul li.thumb i:hover, .modal-body .info i:hover{
+    color: green;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 22px
+}
+.gallery-breadcrumb .curs{cursor: pointer;color: blue}
+
+ul.albums li{cursor: pointer;}
+ul.albums li:hover, ul.photos li:hover{-webkit-box-shadow: 0px 0px 5px 2px rgba(207,205,207,0.75);
+-moz-box-shadow:    0px 0px 5px 2px rgba(207,205,207,0.75);
+box-shadow:         0px 0px 5px 2px rgba(207,205,207,0.75);}
+.gallery-tools{
+    display: block;
+    background: #EAE7E7;
+    padding: 5px;
+}
+.caption{display: block; overflow: hidden; text-overflow: ellipsis;}
+
+.gallery-tools .progress{margin-bottom: 0; margin-top: 8px}
+.fileupload-buttonbar .btn{margin-bottom: 0;}
+.fileupload-buttonbar{padding: 3px 0;}
+.position-fixed {
+  position: fixed;
+}
+.albums > li, .photos > li{position: relative;}
+.modal-body{min-height: 200px; max-height: 600px; overflow: auto;}
+.btn-newfolder{text-align: left;}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="appCtrl" ng-init="init()">
+    <head>
+        <meta charset="UTF-8">
+        <title>Administrator - Node LTE</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <!-- Bootstrap 3.3.2 -->
+        <link href="/backend/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- FontAwesome 4.3.0 -->
+        <link href="/shared/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons 2.0.0 -->
+        <link href="/shared/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="/backend/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+        <link href="/shared/gallery/css/blueimp-gallery.min.css" rel="stylesheet" type="text/css" />
+        <link href="/backend/dist/css/MyStyle.css" rel="stylesheet" type="text/css" />
+        <link href="/backend/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body class="sidebar-mini skin-blue sidebar-collapse" id="top">
+        <div class="wrapper">            
+            <% include "backend/template/top" %>
+            <!-- Left side column. contains the logo and sidebar -->
+            <% include "backend/template/left" %>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Main content -->
+                <section class="content">
+                    <div ui-view></div>
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">                
+                <strong>Copyright &copy; 2014-2015 <!-- <a href="/">V3S</a> -->.</strong> All rights reserved.
+                <!-- <div class="pull-right hidden-xs">
+                    <b>Version</b> 2.0
+                </div> -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <div id="loading-indicator" ng-show="isLoading">
+            <i class="fa fa-refresh fa-spin fa-3x"></i>
+        </div>    
+        
+        <!-- jQuery 2.1.3 -->
+        <script src="/backend/plugins/jQuery/jQuery-2.1.3.min.js"></script>
+        <!-- Bootstrap 3.3.2 JS -->
+        <script src="/backend/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>    
+        <!-- jQuery UI 1.11.2 -->
+        <script src="/shared/jquery-ui-1.11.4.custom/jquery-ui.min.js" type="text/javascript"></script>
+        <!-- Slimscroll -->
+        <script src="/backend/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="/backend/dist/js/app.min.js" type="text/javascript"></script>  
+        <!-- Angular -->    
+        <script src="/shared/angular-1.3.14/angular.min.js"></script>     
+        <script src="/shared/ui-router-master/release/angular-ui-router.min.js"></script>            
+        <script src="/shared/js/ocLazyLoad.js"></script>
+        <script src="/shared/js/ui-bootstrap-tpls-0.12.1.min.js"></script> 
+        <script src="/shared/gallery/js/blueimp-gallery.min.js"></script>
+        <script src="/shared/ng-file-upload/dist/ng-file-upload-shim.min.js"></script> 
+        <script src="/shared/ng-file-upload/dist/ng-file-upload.min.js"></script> 
+
+        <!-- Load controller -->
+        <script src="/backend/controller/appCtrl.js" ></script> 
+        <script src="/backend/controller/alertBoxCtrl.js" ></script> 
+
+        <script type="text/ng-template" id="myModalContent.html">
+            <div class="modal-header">
+                <h3 class="modal-title">Alert</h3>
+            </div>
+            <div class="modal-body" ng-bind="message"></div>
+            
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+            </div>
+        </script>
+    </body>
+</html>

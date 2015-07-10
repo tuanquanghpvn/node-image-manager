@@ -1,0 +1,73 @@
+<div class="box box-danger" ng-init="pageList()">
+	<div class="box-header">
+		<div class="row">
+			<div class="col-lg-6 col-xs-12">
+				<ol class="breadcrumb">
+		            <li ng-repeat="item in galleryData.breadcrumb" ng-if="item.name != ''" ng-class="{ 'active' : $index == galleryData.breadcrumb.length - 1 }">
+		            	<a href="" ng-click="navigate(item.url)" ng-if="$index != galleryData.breadcrumb.length - 1"> 
+		        			<i class="fa fa-picture-o" ng-if="$index == 0"></i> &nbsp;<span ng-bind="item.name"></span>
+		        		</a>
+		        		<span ng-bind="item.name" ng-if="$index == galleryData.breadcrumb.length - 1"></span>
+		            </li>
+				</ol>
+			</div>
+
+			<div class="col-lg-6 col-xs-12">
+				<!-- ADD NEW FOLDER -->
+				<button ng-click="showCreateFolder = !showCreateFolder" type="button" class="btn btn-warning kv-fileinput-upload fileinput-upload-button">
+			    	<i class="fa fa-folder"></i> New Folder
+			    </button>
+
+			    <div class="create-new-folder" style="left: 15px;" ng-show="showCreateFolder">
+				    <div class="create-folder-pad">
+				        <div class="create-folder-input-bl">
+				            <input ng-model="folderName" type="text" placeholder="Folder Name" autofocus="autofocus">
+				        </div>
+				        <div class="create-folder-bottom">
+				            <button type="button" class="btn btn-danger" ng-click="createFolder()">Create</button>
+				        </div>
+				    </div>
+				</div>
+				<!-- END ADD NEW FOLDER -->
+
+				<!-- UPLOAD IMAGE -->
+				<div class="btn btn-primary btn-file"> 
+			    	<i class="glyphicon glyphicon-folder-open"></i> &nbsp;Upload
+			    	<input id="input-4" ngf-select ng-model="files" type="file" multiple="true" class="">
+			    </div>
+
+			    <div class="progress" style="margin-top: 10px;" ng-if="progressPercentage > 0 && progressPercentage < 100">
+					<div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="{{progressPercentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progressPercentage}}%">
+						<span class="sr-only" ng-bind-template="{{progressPercentage}}%"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="box-body">
+		<div class="row">
+			<div class="col-lg-2 col-xs-4 text-center" ng-repeat="album in galleryData.albums">				
+	            <a href="">
+	            	<div class="thumbnail">
+					    <img ng-click="navigate(album.url)" src="/backend/dist/img/folder.png" alt="{{album.name}}" />
+					    <i class="fa fa-times close" ng-click="removeFolder(album.name)"></i>
+            			<span ng-click="navigate(album.url)" class="caption" ng-bind="album.name" ng-click="navigate(album.url)"></span>
+					</div>
+	            </a>		            
+	        </div>
+		</div>
+	</div>
+
+	<div class="box-footer">
+		<div class="row">
+			<div class="col-lg-2 col-xs-4 text-center" ng-repeat="photo in galleryData.photos">
+            	<div class="thumbnail">
+				    <img ng-src="{{photo.src}}" alt="{{photo.name}}" />
+				    <i class="fa fa-times close" ng-click="removeFile(photo.path)"></i>
+        			<span class="caption" ng-bind="photo.name"></span>
+				</div>          
+	        </div>
+		</div>
+	</div>
+</div>
