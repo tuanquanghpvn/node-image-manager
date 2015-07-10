@@ -98,10 +98,11 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.set('port', 3000);
+var port = process.env.PORT || 8686;
+app.set('port', port);
 
 app.listen(app.get('port'), function() {
-    console.log('Website listen port ' + 3000);
+    console.log('Website listen port ' + port);
 });
 
 module.exports = app;
